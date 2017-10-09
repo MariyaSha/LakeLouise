@@ -1,0 +1,89 @@
+/* Making sure the caption appears underneath the carousel @media smaller than medium*/
+/*Problem: the arrows of the carousel fade @media smaller than medium*/
+
+@media (max-width: 768px) {
+    .carousel-caption {
+    position: relative;
+    overflow: visible;
+    left: 0 ;
+    right: 0;
+    color: #000;
+    }
+ }
+
+/*Background image to the header text, gradient effect*/
+.mainHeader {
+    padding-top: 170px;
+    height: 850px;
+    background:
+            linear-gradient(0deg, #fff, transparent),
+            #ffa949 url('../img/cabinWinter.jpg') no-repeat center;
+    background-size: cover;
+}
+
+/*Header Text*/
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 2px black;
+}
+
+/*Header Arrow*/
+/*Problem: SAV arrow does not align with the text, not centered although clearly states left:50%;*/
+
+.headerImage {
+    max-width: 100px;
+    position:absolute;
+    bottom: -120%;
+}
+
+/*Darkening carousel images to allow text to show trough*/
+/*Problem: filter won't fade, even when commanded, @media < medium*/
+
+.carousel-item img{
+    filter: brightness(50%);
+}
+
+/*Hotels and Activities Headers*/
+.thumbnail {
+    position: relative;
+}
+
+.thumbnail img {
+    opacity: 0.5;
+}
+
+.thumbnail-caption {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-shadow: 1px 1px 1px grey;
+}
+
+/*Adding layout to elements*/
+
+h5, h3, ul, .twoColumnDesign, .intro, .divider, .footer{
+    margin: 1em auto;
+}
+
+p, h1, h2, h3, h4, h5 {
+    font-family: 'Lato', sans-serif;
+}
+
+/*Map*/
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
